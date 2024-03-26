@@ -31,8 +31,9 @@ def pause_for_two_hours():
 # Путь к папке с изображениями
 folder_path = "PICTURES"
 
-# Получаем список файлов в порядке их имени
-image_files = sorted(os.listdir(folder_path))
+# Получаем список файлов в порядке их имени, учитывая числовой порядок
+image_files = sorted(os.listdir(folder_path), key=lambda x: int(x.split('.')[0]))
+
 
 print("Ваш запрос:", promt, "\n")
 
@@ -114,10 +115,8 @@ for image_file in image_files:
 
             # Проверяем наличие метаданных Exif
             # Проверяем наличие метаданных Exif
-            if "exif" in img.info:
-                exif_dict = piexif.load(img.info['exif'])
-            else:
-                exif_dict = {"0th": {}, "Exif": {}, "GPS": {}, "Interop": {}, "1st": {}, "thumbnail": None}
+
+            exif_dict = {"0th": {}, "Exif": {}, "GPS": {}, "Interop": {}, "1st": {}, "thumbnail": None}
 
             # Кодировка строк в UTF-16LE для совместимости с XP тегами
             if title_line:
