@@ -136,7 +136,7 @@ for image_file in image_files:
 
             # Сохранение изменений
             exif_bytes = piexif.dump(exif_dict)
-            img.save(image_path, exif=exif_bytes, format='JPEG')
+            img.save(image_path, exif=exif_bytes, format='JPEG', quality=100)
 
         except Exception as e:
             print("Ошибка при обработке файла:", e)
