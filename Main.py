@@ -86,10 +86,10 @@ for image_file in image_files:
 
             # Получаем текстовый ответ от GPT
             gpt_response = response.choices[0]["message"]["content"]
-            description = ""
             # Ищем строки с ключевыми словами "Title:" и "Tags:"
             title_line = next((line[len("Title:"):].strip() for line in gpt_response.split('\n') if line.startswith('Title:')), None)
             tags_line = next((line[len("Tags:"):].strip() for line in gpt_response.split('\n') if line.startswith('Tags:')), None)
+            description = next((line[len("Description:"):].strip() for line in gpt_response.split('\n') if line.startswith('Description:')), None)
 
             # Выводим информацию о тегах и названии файла
             print(f"File: '{image_file}' Обработан ключом: {file_count}! \n{response.choices[0]['message']['content']}")
@@ -98,11 +98,9 @@ for image_file in image_files:
             if tags_line:
                 print("Найдены теги:", tags_line, "\n")
             if title_line:
-                title_index = gpt_response.index(title_line)
-                description = gpt_response[title_index + len(title_line):].strip()
                 print("Найдено название:", title_line)
-                if description:
-                    print("Найдено описание:", description, '\n')
+            if description:
+                print("Найдено описание:", description, '\n')
 
             # Проверяем наличие запрещенных слов
             if title_line and description and ("the photo shows" in title_line or "In the picture" in title_line or "the photo shows" in description or "In the picture" in description):
