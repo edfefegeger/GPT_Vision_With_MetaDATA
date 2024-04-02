@@ -1,0 +1,12 @@
+{
+    "files": [
+        "widget.py",
+        "form.ui",
+        "Main.py",
+        "config.ini",
+        ".gitignore",
+        "ui_form.py",
+        "config.ui",
+        "ui_ui_config.py"
+    ]
+}
