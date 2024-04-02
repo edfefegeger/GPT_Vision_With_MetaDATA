@@ -1,6 +1,6 @@
 from PySide6.QtWidgets import QApplication, QWidget, QPushButton, QVBoxLayout
 from ui_form import Ui_Widget
-from ui_ui_config import Ui_Form
+from ui_config import Ui_Form
 import sys
 import subprocess
 

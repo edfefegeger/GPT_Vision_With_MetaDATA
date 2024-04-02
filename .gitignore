@@ -3,3 +3,8 @@ PICTURES/*
 
 # Ignore the config.ini file
 config.ini
+
+
+__pycache__
+
+/.user
