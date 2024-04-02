@@ -80,6 +80,7 @@ class Widget(QWidget):
 
     # Слоты для каждой кнопки
     def on_config_button_clicked(self):
+        self.config_dialog.setWindowTitle("Настройки")
         self.config_dialog.show()  # Показываем диалоговое окно
 
     def on_start_button_clicked(self):
@@ -88,5 +89,6 @@ class Widget(QWidget):
 if __name__ == "__main__":
     app = QApplication([])
     widget = Widget()
+    widget.setWindowTitle("Главное окно")
     widget.show()
     sys.exit(app.exec())
