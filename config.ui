@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1000</width>
-    <height>659</height>
+    <width>998</width>
+    <height>698</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -203,24 +203,6 @@
       </widget>
      </item>
      <item>
-      <widget class="QLineEdit" name="lineEdit_8">
-       <property name="minimumSize">
-        <size>
-         <width>0</width>
-         <height>40</height>
-        </size>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="text">
-        <string/>
-       </property>
-      </widget>
-     </item>
-     <item>
       <widget class="QLineEdit" name="lineEdit_5">
        <property name="minimumSize">
         <size>
@@ -274,6 +256,24 @@
        </property>
       </widget>
      </item>
+     <item>
+      <widget class="QLineEdit" name="lineEdit_8">
+       <property name="minimumSize">
+        <size>
+         <width>0</width>
+         <height>40</height>
+        </size>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>12</pointsize>
+        </font>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+      </widget>
+     </item>
     </layout>
    </item>
    <item row="1" column="0" colspan="2">
@@ -281,13 +281,13 @@
      <property name="maximumSize">
       <size>
        <width>16777215</width>
-       <height>25</height>
+       <height>16777215</height>
       </size>
      </property>
      <property name="font">
       <font>
-       <pointsize>12</pointsize>
-       <bold>false</bold>
+       <pointsize>14</pointsize>
+       <bold>true</bold>
       </font>
      </property>
      <property name="text">
