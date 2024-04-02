@@ -35,6 +35,10 @@ def pause_for_two_hours():
 # Путь к папке с изображениями
 folder_path = filedialog.askdirectory(title="Выберите папку с изображениями")
 
+if not folder_path:
+    log_and_print("Ошибка.Папка не выбрана. Программа завершает работу.")
+    exit()
+
 # Получаем список файлов в порядке их имени, учитывая числовой порядок
 image_files = sorted(os.listdir(folder_path), key=lambda x: int(x.split('.')[0]))
 
