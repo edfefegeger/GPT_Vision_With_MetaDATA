@@ -1,0 +1,87 @@
+2024-04-02 19:49:32,831 - INFO - Запуск программы
+2024-04-02 19:49:36,482 - INFO - Запуск программы
+2024-04-02 19:49:50,469 - INFO - File: '1.jpg' Обработан ключом: Первый! 
+Title: The Smile
+Tags: smile, man, casual, happy, portrait, confident, adult, cheerful, fashion, standing, wall, blue, shirt, denim, lifestyle, trendy, arms, crossed, stylish, model, studio, single, male, joy, handsome, young, person, casualwear, confidence, charm, friendly, positive, relaxed, cool, content, satisfaction, teeth, neat, attractive, success, wellbeing, health, composure, ease
+Description: A man in casual denim wear stands against a grey wall with arms crossed and a friendly smile.
+2024-04-02 19:49:50,469 - INFO - Найдены теги: smile, man, casual, happy, portrait, confident, adult, cheerful, fashion, standing, wall, blue, shirt, denim, lifestyle, trendy, arms, crossed, stylish, model, studio, single, male, joy, handsome, young, person, casualwear, confidence, charm, friendly, positive, relaxed, cool, content, satisfaction, teeth, neat, attractive, success, wellbeing, health, composure, ease 
+
+2024-04-02 19:49:50,469 - INFO - Найдено название: The Smile
+2024-04-02 19:49:50,470 - INFO - Найдено описание: A man in casual denim wear stands against a grey wall with arms crossed and a friendly smile. 
+
+2024-04-02 19:50:05,769 - INFO - File: '2.jpg' Обработан ключом: Второй! 
+Title: Smile
+Tags: woman,smile,happy,portrait,beauty,joy,summer,young,sunlight,hair,cheerful,beautiful,female,nature,outdoor,glow,warm,lifestyle,confidence,daylight,casual,relaxation,fresh,pretty,elegant,girl,ease,sunny,glamour,sun,shine,leisure,joyful,positive,adventure,vibrant,dusk,golden,urban,friendly,light,city,wellness,health
+Description: A woman smiling warmly in a sunlit outdoor setting.
+2024-04-02 19:50:05,770 - INFO - Найдены теги: woman,smile,happy,portrait,beauty,joy,summer,young,sunlight,hair,cheerful,beautiful,female,nature,outdoor,glow,warm,lifestyle,confidence,daylight,casual,relaxation,fresh,pretty,elegant,girl,ease,sunny,glamour,sun,shine,leisure,joyful,positive,adventure,vibrant,dusk,golden,urban,friendly,light,city,wellness,health 
+
+2024-04-02 19:50:05,770 - INFO - Найдено название: Smile
+2024-04-02 19:50:05,770 - INFO - Найдено описание: A woman smiling warmly in a sunlit outdoor setting. 
+
+2024-04-02 19:50:41,372 - INFO - File: '3.jpg' Обработан ключом: Первый! 
+Title: The Man
+Tags: portrait, man, beard, fashion, hairstyle, checkered, shirt, casual, style, confidence, smile, outdoors, nature, bokeh, adult, trendy, model, daylight, expression, grooming, photography, individual, youth, trendy, lifestyle, urban, casualwear, cool, facialhair, handsome, cheerful, person, male, confident, stylish, modern, summer, eyecontact, hipster, elegance, charismatic, vibrant, leisure, sharp, facial
+Description: A man with styled hair and a beard wears a checkered shirt and exudes confidence.
+2024-04-02 19:50:41,373 - INFO - Найдены теги: portrait, man, beard, fashion, hairstyle, checkered, shirt, casual, style, confidence, smile, outdoors, nature, bokeh, adult, trendy, model, daylight, expression, grooming, photography, individual, youth, trendy, lifestyle, urban, casualwear, cool, facialhair, handsome, cheerful, person, male, confident, stylish, modern, summer, eyecontact, hipster, elegance, charismatic, vibrant, leisure, sharp, facial 
+
+2024-04-02 19:50:41,373 - INFO - Найдено название: The Man
+2024-04-02 19:50:41,373 - INFO - Найдено описание: A man with styled hair and a beard wears a checkered shirt and exudes confidence. 
+
+2024-04-02 19:50:43,314 - ERROR - Ошибка при обработке файла: Error communicating with OpenAI: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-04-02 19:50:43,691 - INFO - Ошибка при обработке файла: Error communicating with OpenAI: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2024-04-02 19:50:43,887 - INFO - error_code=unsupported_country_region_territory error_message='Country, region, or territory not supported' error_param=None error_type=request_forbidden message='OpenAI API error received' stream_error=False
+2024-04-02 19:50:43,887 - ERROR - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:44,016 - INFO - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:44,061 - INFO - error_code=unsupported_country_region_territory error_message='Country, region, or territory not supported' error_param=None error_type=request_forbidden message='OpenAI API error received' stream_error=False
+2024-04-02 19:50:44,061 - ERROR - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:44,192 - INFO - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:44,192 - INFO - Достигнуто максимальное количество попыток (3) для файла 4.jpg. Переходим к следующему файлу. 
+
+2024-04-02 19:50:44,232 - INFO - error_code=unsupported_country_region_territory error_message='Country, region, or territory not supported' error_param=None error_type=request_forbidden message='OpenAI API error received' stream_error=False
+2024-04-02 19:50:44,232 - ERROR - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:44,402 - INFO - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:44,448 - INFO - error_code=unsupported_country_region_territory error_message='Country, region, or territory not supported' error_param=None error_type=request_forbidden message='OpenAI API error received' stream_error=False
+2024-04-02 19:50:44,448 - ERROR - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:45,355 - INFO - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:45,423 - INFO - error_code=unsupported_country_region_territory error_message='Country, region, or territory not supported' error_param=None error_type=request_forbidden message='OpenAI API error received' stream_error=False
+2024-04-02 19:50:45,423 - ERROR - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:46,106 - INFO - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:46,106 - INFO - Достигнуто максимальное количество попыток (3) для файла 5.jpg. Переходим к следующему файлу. 
+
+2024-04-02 19:50:46,165 - INFO - error_code=unsupported_country_region_territory error_message='Country, region, or territory not supported' error_param=None error_type=request_forbidden message='OpenAI API error received' stream_error=False
+2024-04-02 19:50:46,165 - ERROR - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:46,842 - INFO - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:46,902 - INFO - error_code=unsupported_country_region_territory error_message='Country, region, or territory not supported' error_param=None error_type=request_forbidden message='OpenAI API error received' stream_error=False
+2024-04-02 19:50:46,902 - ERROR - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:47,340 - INFO - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:47,404 - INFO - error_code=unsupported_country_region_territory error_message='Country, region, or territory not supported' error_param=None error_type=request_forbidden message='OpenAI API error received' stream_error=False
+2024-04-02 19:50:47,405 - ERROR - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:47,634 - INFO - Ошибка при обработке файла: Country, region, or territory not supported
+2024-04-02 19:50:47,634 - INFO - Достигнуто максимальное количество попыток (3) для файла 6.jpg. Переходим к следующему файлу. 
+
+2024-04-02 19:50:47,634 - INFO - Конец. Все файлы успешно обработаны!
+2024-04-02 19:50:47,855 - INFO - Конец. Все файлы успешно обработаны!
+2024-04-02 19:50:47,855 - INFO - Всего успешно обработано файлов GPT: 3
+2024-04-02 19:53:30,460 - INFO - Запуск программы
+2024-04-02 19:53:30,763 - INFO - Запуск программы
+2024-04-02 19:54:01,394 - INFO - File: '1.jpg' Обработан ключом: Первый! 
+Title: A Smile
+Tags: man,smiling,portrait,confident,casual,adult,happy,wall,standing,jeans,shirt,content,style,relaxed,friendly,young,fashion,cheerful,joy,modern,positive,cool,charming,authentic,handsome,individual,ease,comfort,denim,arms,grey,studio,expressive,look,attractive,single,person,teeth,hair,wellness,lifestyle,engaging,charisma,tranquil,daytime
+Description: A man with a radiant smile stands crossed-armed against a gray backdrop.
+2024-04-02 19:54:01,394 - INFO - Найдены теги: man,smiling,portrait,confident,casual,adult,happy,wall,standing,jeans,shirt,content,style,relaxed,friendly,young,fashion,cheerful,joy,modern,positive,cool,charming,authentic,handsome,individual,ease,comfort,denim,arms,grey,studio,expressive,look,attractive,single,person,teeth,hair,wellness,lifestyle,engaging,charisma,tranquil,daytime 
+
+2024-04-02 19:54:01,394 - INFO - Найдено название: A Smile
+2024-04-02 19:54:01,394 - INFO - Найдено описание: A man with a radiant smile stands crossed-armed against a gray backdrop. 
+
+2024-04-02 19:54:07,601 - INFO - File: '2.jpg' Обработан ключом: Второй! 
+Title: Smile
+Tags: woman,smile,happiness,sunlight,portrait,beauty,joy,summer,outdoors,nature,cheerful,glow,evening,casual,relaxation,leisure,lifestyle,female,warm,youth,shine,confidence,friendly,healthy,sunshine,daylight,content,positive,vibrant,charm,grace,elegance,serenity,peaceful,glamour,fashion,model,style,ease,teeth,eye,makeup,hair,glamour
+Description: A smiling woman enjoying the warm evening sunlight.
+2024-04-02 19:54:07,602 - INFO - Найдены теги: woman,smile,happiness,sunlight,portrait,beauty,joy,summer,outdoors,nature,cheerful,glow,evening,casual,relaxation,leisure,lifestyle,female,warm,youth,shine,confidence,friendly,healthy,sunshine,daylight,content,positive,vibrant,charm,grace,elegance,serenity,peaceful,glamour,fashion,model,style,ease,teeth,eye,makeup,hair,glamour 
+
+2024-04-02 19:54:07,602 - INFO - Найдено название: Smile
+2024-04-02 19:54:07,602 - INFO - Найдено описание: A smiling woman enjoying the warm evening sunlight. 
+
+2024-04-02 19:54:07,613 - INFO - Конец. Все файлы обработаны!
+2024-04-02 19:54:07,804 - INFO - Конец. Все файлы обработаны!
+2024-04-02 19:54:07,805 - INFO - Всего успешно обработано файлов GPT: 2

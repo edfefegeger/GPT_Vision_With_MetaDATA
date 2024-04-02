@@ -5,8 +5,10 @@ import base64
 import configparser
 from PIL import Image
 import piexif
+from tkinter import filedialog, Tk  # Импортируем необходимые модули из tkinter
 from logger import log_and_print
 
+log_and_print("Запуск программы")
 # Чтение API-ключей из файла конфигурации
 config = configparser.ConfigParser()
 config.read('config.ini')
@@ -19,6 +21,7 @@ max_tokens = int(config['API']['max_tokens'])
 temp = int(config['API']['temp'])
 model = config['API']['model']
 
+num_successful_files = 0
 
 # Функция для кодирования изображения в формат Base64
 def encode_image(image_path):
@@ -30,7 +33,7 @@ def pause_for_two_hours():
     time.sleep(7200)  # 7200 секунд = 2 часа
 
 # Путь к папке с изображениями
-folder_path = "PICTURES"
+folder_path = filedialog.askdirectory(title="Выберите папку с изображениями")
 
 # Получаем список файлов в порядке их имени, учитывая числовой порядок
 image_files = sorted(os.listdir(folder_path), key=lambda x: int(x.split('.')[0]))
@@ -147,6 +150,8 @@ for image_file in image_files:
                 pause_for_two_hours()
                 continue  # Продолжаем обработку файла после ожидания
 
+        num_successful_files += 1
+
         break  # Выходим из цикла while, если ответ не содержит запрещенных слов или достигнуто ограничение по попыткам
 
     # Если после 5 попыток ответ все еще содержит запрещенные слова, переходим к следующему файлу
@@ -154,5 +159,6 @@ for image_file in image_files:
         log_and_print(f"Достигнуто максимальное количество попыток ({attempts_max}) для файла {image_file}. Переходим к следующему файлу.", "\n")
 
 
-log_and_print("Все файлы успешно обработаны!")
+log_and_print("Конец. Все файлы обработаны!")
+log_and_print("Всего успешно обработано файлов GPT:", num_successful_files)
 input("Для выхода нажмите Enter...")
