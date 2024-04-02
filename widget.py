@@ -12,6 +12,9 @@ class ConfigDialog(QWidget):
         self.ui.setupUi(self)
         self.load_settings()
 
+        # Добавляем слот к кнопке "Сохранить"
+        self.ui.pushButton.clicked.connect(self.save_settings)
+
     def load_settings(self):
         config = configparser.ConfigParser()
         config.read('config.ini')
@@ -35,6 +38,34 @@ class ConfigDialog(QWidget):
         self.ui.lineEdit_6.setText(model)
         self.ui.lineEdit_7.setText(temp)
         self.ui.lineEdit_8.setText(max_tokens)
+
+    def save_settings(self):
+        config = configparser.ConfigParser()
+        config.read('config.ini')
+
+        # Получаем значения из полей Line Edit
+        api_key = self.ui.lineEdit.text()
+        api_key2 = self.ui.lineEdit_2.text()
+        promt = self.ui.lineEdit_3.text()
+        max_attempts = self.ui.lineEdit_4.text()
+        detail = self.ui.lineEdit_5.text()
+        model = self.ui.lineEdit_6.text()
+        temp = self.ui.lineEdit_7.text()
+        max_tokens = self.ui.lineEdit_8.text()
+
+        # Записываем значения в конфиг
+        config.set('API', 'api_key', api_key)
+        config.set('API', 'api_key2', api_key2)
+        config.set('API', 'promt', promt)
+        config.set('API', 'max_attempts', max_attempts)
+        config.set('API', 'detail', detail)
+        config.set('API', 'model', model)
+        config.set('API', 'temp', temp)
+        config.set('API', 'max_tokens', max_tokens)
+
+        # Сохраняем изменения в файл
+        with open('config.ini', 'w') as configfile:
+            config.write(configfile)
 
 class Widget(QWidget):
     def __init__(self, parent=None):
