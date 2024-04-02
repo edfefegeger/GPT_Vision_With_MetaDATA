@@ -7,6 +7,8 @@
         ".gitignore",
         "ui_form.py",
         "config.ui",
-        "ui_config.py"
+        "ui_config.py",
+        "logger.py",
+        "LOGS.log"
     ]
 }

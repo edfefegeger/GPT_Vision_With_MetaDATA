@@ -5,6 +5,7 @@ import base64
 import configparser
 from PIL import Image
 import piexif
+from logger import log_and_print
 
 # Чтение API-ключей из файла конфигурации
 config = configparser.ConfigParser()
@@ -25,7 +26,7 @@ def encode_image(image_path):
         return base64.b64encode(image_file.read()).decode('utf-8')
 
 def pause_for_two_hours():
-    print("Превышен лимит запросов. Остановка работы на два часа.")
+    log_and_print("Ошибка,Превышен лимит запросов. Остановка работы на два часа.")
     time.sleep(7200)  # 7200 секунд = 2 часа
 
 # Путь к папке с изображениями
@@ -92,19 +93,19 @@ for image_file in image_files:
             description = next((line[len("Description:"):].strip() for line in gpt_response.split('\n') if line.startswith('Description:')), None)
 
             # Выводим информацию о тегах и названии файла
-            print(f"File: '{image_file}' Обработан ключом: {file_count}! \n{response.choices[0]['message']['content']}")
+            log_and_print(f"File: '{image_file}' Обработан ключом: {file_count}! \n{response.choices[0]['message']['content']}")
             print("---------------------------------------")
 
             if tags_line:
-                print("Найдены теги:", tags_line, "\n")
+                log_and_print("Найдены теги:", tags_line, "\n")
             if title_line:
-                print("Найдено название:", title_line)
+                log_and_print("Найдено название:", title_line)
             if description:
-                print("Найдено описание:", description, '\n')
+                log_and_print("Найдено описание:", description, '\n')
 
             # Проверяем наличие запрещенных слов
             if title_line and description and ("the photo shows" in title_line or "In the picture" in title_line or "the photo shows" in description or "In the picture" in description):
-                print("Ошибка: найдены запрещенные слова в ответе")
+                log_and_print("Ошибка: найдены запрещенные слова в ответе")
                 attempts += 1  # Увеличиваем счетчик попыток
                 continue  # Повторяем обработку файла
 
@@ -137,7 +138,7 @@ for image_file in image_files:
             img.save(image_path, exif=exif_bytes, format='JPEG', quality=100)
 
         except Exception as e:
-            print("Ошибка при обработке файла:", e)
+            log_and_print("Ошибка при обработке файла:", e)
             attempts += 1  # Увеличиваем счетчик попыток
             continue  # Повторяем обработку файла
 
@@ -150,8 +151,8 @@ for image_file in image_files:
 
     # Если после 5 попыток ответ все еще содержит запрещенные слова, переходим к следующему файлу
     if attempts == attempts_max:
-        print(f"Достигнуто максимальное количество попыток ({attempts_max}) для файла {image_file}. Переходим к следующему файлу.", "\n")
+        log_and_print(f"Достигнуто максимальное количество попыток ({attempts_max}) для файла {image_file}. Переходим к следующему файлу.", "\n")
 
 
-print("Все файлы успешно обработаны!")
+log_and_print("Все файлы успешно обработаны!")
 input("Для выхода нажмите Enter...")
