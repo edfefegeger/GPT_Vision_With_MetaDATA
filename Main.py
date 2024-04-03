@@ -56,7 +56,7 @@ for image_file in image_files:
             api_key = api_key2
             file_count = "Второй"
     else:
-        api_key = api_key
+        api_key = api_key1
         file_count = "Первый"
 
     openai.api_key = api_key
